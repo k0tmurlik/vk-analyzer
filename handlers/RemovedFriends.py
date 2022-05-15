@@ -26,7 +26,7 @@ class RemovedFriends:
             time.sleep(self.n)  # Специально в начале, чтобы бот сразу же не удалил все заявки в друзья, подождем n секунд и потом удалим
 
             my_requests = self.vk_session.method("friends.getRequests", {"out": 1, "extended": 1})  # Получаем исходящие заявки в друзья
-            if my_requests['count'] <= 0:  # Если количетво заявок <= 0 (от VK Api все что угодно можно ожидать), то ничего не делаем
+            if my_requests['count'] <= 0:  # Если количество заявок <= 0 (от VK Api все что угодно можно ожидать), то ничего не делаем
                 continue
 
             count = 0
