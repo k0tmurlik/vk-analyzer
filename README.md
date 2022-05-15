@@ -15,3 +15,7 @@ ___
 ```
   python3 main.py
 ```
+или
+```
+  sh start.sh
+```
