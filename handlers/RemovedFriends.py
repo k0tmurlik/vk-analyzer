@@ -30,7 +30,7 @@ class RemovedFriends:
                 continue
 
             count = 0
-            text = "🔔 Список клоунов удаливших из друзей:\n"
+            text = "🔔 Список юзеров удаливших из друзей:\n"
 
             for user in my_requests['items']:
                 response = self.vk_session.method("friends.delete", {"user_id": user['user_id']})
@@ -40,6 +40,6 @@ class RemovedFriends:
 
                     print(f"⚙️ {user['first_name']} {user['last_name']} (vk.com/id{user['user_id']} удалил(-а) Вас из друзей.")
 
-            text += f"\nℹ️ Общее количество клоунов, от которых отписался бот: {count}"
+            text += f"\nℹ️ Общее количество юзеров, от которых отписался бот: {count}"
             self.f.send_message(self.f.owner_id, text)
 
